@@ -1,0 +1,6 @@
+.env
+.idea
+.DS_Store
+node_modules
+console_stats.json
+console_stats_errors.json
