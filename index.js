@@ -10,6 +10,10 @@ const CLIProgress = require('cli-progress')
 const { is_valid_url, get_errors_stats, clear_output } = require('./utils')
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY
 
+if (!GOOGLE_API_KEY) {
+  throw new Error('API key not found')
+}
+
 const progress_bar = new CLIProgress.SingleBar(
   {
     format: 'Loading GSC stats {bar} {percentage}% || {value}/{total} URLs tested',
